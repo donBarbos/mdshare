@@ -8,6 +8,7 @@ on:
 
 jobs:
   lint:
+    name: Run Linters
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,11 +22,11 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           yarn install --frozen-lockfile
 
-      - name: Run lint
+      - name: Run Linters
         run: |
           yarn lint
           yarn prettier:check

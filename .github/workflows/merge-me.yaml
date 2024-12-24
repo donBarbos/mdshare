@@ -1,20 +1,15 @@
 name: Merge me!
 
-on:
-  workflow_run:
-    types:
-      - completed
-    workflows:
-      - 'Build'
-      - 'Lint'
+on: pull_request_target
 
 jobs:
   merge-me:
     name: Merge me!
     runs-on: ubuntu-latest
     steps:
-      - if: ${{ github.event.workflow_run.conclusion == 'success' }}
+      - if: ${{ github.event.workflow_run.conclusion == "success" }}
         name: Merge me!
         uses: ridedott/merge-me-action@v2
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.AUTOMERGE_GITHUB_ACCESS_TOKEN }}
+    timeout-minutes: 5

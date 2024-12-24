@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+    name: Test Build
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,10 +22,10 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           yarn install --frozen-lockfile
 
-      - name: Generate build
+      - name: Generate Build
         run: |
           yarn build

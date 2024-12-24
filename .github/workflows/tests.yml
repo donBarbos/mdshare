@@ -5,9 +5,14 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 jobs:
-  build:
+  test:
+    name: Run Tests
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,19 +26,21 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           yarn install --frozen-lockfile
 
-      - name: Run test
+      - name: Run Tests
         run: |
           yarn test:ci
 
-      - name: Collect coverage
+      - name: Collect Coverage
+        if: "!contains(github.event.pull_request.labels.*.name, 'dependencies')"
         run: |
           yarn coverage
 
-      - name: Upload coverage reports to Codecov
+      - name: Upload Coverage Reports to Codecov
+        if: "!contains(github.event.pull_request.labels.*.name, 'dependencies')"
         uses: codecov/codecov-action@v3
         with:
           fail_ci_if_error: true

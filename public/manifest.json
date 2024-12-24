@@ -1,8 +1,8 @@
 {
-  "name": "mdShare",
+  "name": "md share",
   "short_name": "mdShare",
   "description": "Best way to share your markdown files.",
-  "start_url": "https://md-share.vercel.app/",
+  "start_url": "https://mdshare.vercel.app/",
   "theme_color": "#0d1117",
   "background_color": "#f6f8fa",
   "dir": "auto",

@@ -1,12 +1,12 @@
 {
-  "name": "md-share",
+  "name": "mdshare",
   "version": "1.8.15",
   "description": "Application to share Markdown files",
   "author": "donBarbos <donbarbos@proton.me>",
   "license": "AGPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/donBarbos/md-share"
+    "url": "https://github.com/donBarbos/mdshare"
   },
   "scripts": {
     "dev": "next dev",

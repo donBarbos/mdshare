@@ -1,6 +1,6 @@
 <!-- Original file: https://www.iconfinder.com/icons/4394350/logo_logos_markdown_icon -->
 <h1 align="center">
-  <a href="https://md-share.vercel.app">
+  <a href="https://mdshare.vercel.app">
     <img alt="Markdown" src="./public/favicon.svg" width="140" /><br/>
   </a>
   .mdShare
@@ -11,13 +11,13 @@
 </h3>
 
 <p align="center">
-  <a href="https://github.com/donBarbos/md-share/tags"><img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/donBarbos/md-share"></a>
-  <a href="https://codecov.io/gh/donBarbos/md-share" ><img alt="Coverage Status" src="https://codecov.io/gh/donBarbos/md-share/branch/main/graph/badge.svg?token=0O5750DY6J"/></a>
-  <a href="https://github.com/donBarbos/md-share/actions/workflows/build.yml"><img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/md-share/build.yml?label=build"></a>
-  <a href="https://github.com/donBarbos/md-share/actions/workflows/tests.yml"><img alt="Tests Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/md-share/tests.yml?label=tests"></a>
-  <a href="https://github.com/donBarbos/md-share/actions/workflows/lint.yml"><img alt="Linter Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/md-share/lint.yml?label=lint"></a>
+  <a href="https://github.com/donBarbos/mdshare/tags"><img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/donBarbos/mdshare"></a>
+  <a href="https://codecov.io/gh/donBarbos/mdshare" ><img alt="Coverage Status" src="https://codecov.io/gh/donBarbos/mdshare/branch/main/graph/badge.svg?token=0O5750DY6J"/></a>
+  <a href="https://github.com/donBarbos/mdshare/actions/workflows/build.yml"><img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/mdshare/build.yml?label=build"></a>
+  <a href="https://github.com/donBarbos/mdshare/actions/workflows/tests.yml"><img alt="Tests Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/mdshare/tests.yml?label=tests"></a>
+  <a href="https://github.com/donBarbos/mdshare/actions/workflows/lint.yml"><img alt="Linter Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/mdshare/lint.yml?label=lint"></a>
   <a href="http://commitizen.github.io/cz-cli/"><img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"></a>
-  <a href="https://github.com/donBarbos/md-share/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg" alt="License"></a>
+  <a href="https://github.com/donBarbos/mdshare/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg" alt="License"></a>
 </p>
 
 ## 📄 Share and Collaborate Effortlessly with .mdShare
@@ -60,7 +60,7 @@ The **.mdShare** Solution: Simplify Markdown File Sharing. Effortless Sharing: U
 
 You can choose to use the hosted version (also don't forget to set up environment variables)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FdonBarbos%2Fmd-share)\
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FdonBarbos%2Fmdshare)\
 [![Deploy Mongo Cloud](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas/database)
 
 ## ⚙️ Settings

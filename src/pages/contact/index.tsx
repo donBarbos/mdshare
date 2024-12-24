@@ -54,7 +54,7 @@ const Contact: NextPage = () => {
         </ul>
         <p>
           source code is available at{' '}
-          <Link href="https://github.com/donBarbos/md-share">this link</Link>
+          <Link href="https://github.com/donBarbos/mdshare">this link</Link>
         </p>
       </Layout>
     </>

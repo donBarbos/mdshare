@@ -62,7 +62,7 @@
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sharp": "^0.31.3"
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.1.1",

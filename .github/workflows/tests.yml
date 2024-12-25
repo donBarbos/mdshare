@@ -41,7 +41,7 @@ jobs:
 
       - name: Upload Coverage Reports to Codecov
         if: "!contains(github.event.pull_request.labels.*.name, 'dependencies')"
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}

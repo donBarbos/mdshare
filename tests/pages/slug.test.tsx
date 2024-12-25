@@ -2,7 +2,7 @@ import { render } from '@testing-library/react'
 
 import PostPage from '@pages/[slug]'
 
-import type { IPage } from '@interfaces'
+import type { IHTMLPage } from '@interfaces'
 
 jest.mock('next/head', () => {
   return {
@@ -22,8 +22,8 @@ describe('[slug] page', () => {
     _id: 'uniq-a1b2c3',
     title: 'Test Page',
     author: 'John Doe',
-    text: '## Test Heading\nThis is a test page.',
-  } as IPage
+    html: '<body><h2>Test Heading</h2>\n<p>This is a test page.</p></body>',
+  } as IHTMLPage
 
   it('should render markdown text', () => {
     const { getByText } = render(<PostPage page={mockPage} />)

@@ -1,6 +1,6 @@
 import { Document } from 'mongoose'
 
-// type for page
+// Page
 export interface IPage extends Document {
   _id: string // a.k.a. `slug`
   title?: string
@@ -8,32 +8,40 @@ export interface IPage extends Document {
   text: string
 }
 
-// type of success response after GET:/api/v1/pages/ request
+// Processed Page
+export interface IHTMLPage {
+  _id: string // a.k.a. `slug`
+  title?: string
+  author?: string
+  html: string
+}
+
+// Success Response from GET:/api/v1/pages/
 export interface IGetPagesResponse {
   success: true
   pages: IPage[]
 }
 
-// type of success response after GET:/api/v1/pages/:id request
+// Success Response from GET:/api/v1/pages/:id
 export interface IGetPageResponse {
   success: true
   page: IPage
 }
 
-// type of request for POST:/api/v1/pages/
+// Request to POST:/api/v1/pages/
 export interface IPostPageRequest {
   text: string
   fileName: string
 }
 
-// type of success response after POST:/api/v1/pages/ request
+// Success Response from POST:/api/v1/pages/
 export interface IPostPageResponse {
   success: true
   status: string
   slug: string
 }
 
-// type of error response
+// Common Error Response
 export interface IErrorResponse {
   success: false
   message: string

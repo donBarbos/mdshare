@@ -1,5 +1,6 @@
 import { Source_Code_Pro } from 'next/font/google'
 import md from 'markdown-it'
+import DOMPurify from 'dompurify'
 
 import { ScrollProgressBar } from '@components/ScrollProgressBar'
 import { Layout } from '@components/Layout'
@@ -7,7 +8,7 @@ import { SEO } from '@components/SEO'
 import styles from '@styles/markdown.module.css'
 
 import type { GetServerSideProps } from 'next'
-import type { IErrorResponse, IGetPageResponse, IPage } from '@interfaces'
+import type { IErrorResponse, IGetPageResponse, IHTMLPage } from '@interfaces'
 
 const sourceCodePro = Source_Code_Pro({
   weight: '400',
@@ -18,11 +19,12 @@ const sourceCodePro = Source_Code_Pro({
 const APP_URL = process.env.APP_URL || 'http://localhost:3000'
 
 export type PostPageProps = {
-  page: IPage
+  page: IHTMLPage
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   context.res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
+
   const { slug } = context.query
   const res = await fetch(`${APP_URL}/api/v1/pages/${slug}`)
   const pageData: IGetPageResponse | IErrorResponse = await res.json()
@@ -33,7 +35,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     }
   }
 
-  const page: IPage = pageData.page
+  const { text, ...rest } = pageData.page
+  const page: IHTMLPage = {
+    ...rest,
+    html: DOMPurify.sanitize(md().render(text)),
+  }
 
   return {
     props: {
@@ -43,9 +49,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 }
 
 export default function PostPage({ page }: PostPageProps) {
-  const text = page.text
-  const title = page.title || 'note'
-  // const description = page.text[]
+  const { html, title } = page
 
   return (
     <>
@@ -54,7 +58,7 @@ export default function PostPage({ page }: PostPageProps) {
         <ScrollProgressBar />
         <section
           className={`${styles.markdown__body} ${sourceCodePro.variable}`}
-          dangerouslySetInnerHTML={{ __html: md().render(text) }}
+          dangerouslySetInnerHTML={{ __html: html }}
         />
       </Layout>
     </>

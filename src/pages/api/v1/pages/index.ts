@@ -4,31 +4,10 @@ import { generateUniqueSlug } from '@utils/generateUniqueSlug'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import type { IPage } from '@interfaces'
 
+// Route: /api/v1/pages
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  /**
-  // Get All Pages
-  // GET: /api/v1/pages
-  if (req.method === 'GET') {
-    console.log(`${new Date().toUTCString()} | Call endpoint: ${req.method} ${req.url}`)
-
-    try {
-      // get all pages
-      const pages: IPage[] = await Page.find()
-
-      // check if pages is empty
-      if (JSON.stringify(pages)[2]) {
-        res.status(200).json({ success: true, pages: pages })
-      } else {
-        throw new Error('Pages does not exist')
-      }
-    } catch (error) {
-      res.status(500).json({ success: false, message: error.message })
-    }
-  }
-  */
-
   // Create Page
-  // POST: /api/v1/pages
+  // Method: POST
   if (req.method === 'POST') {
     console.log(`${new Date().toUTCString()} | Call endpoint: ${req.method} ${req.url}`)
 
@@ -48,12 +27,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(500).json({ success: false, message: error.message })
     }
   }
-  // HEAD: /api/v1/pages
+
+  // Method: HEAD
   else if (req.method === 'HEAD') {
     res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
     res.status(200).end()
   }
-  // *: /api/v1/pages
+
+  // Method: *
   else {
     res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
     res.status(405).json({ success: false, message: 'Method Not Allowed' })

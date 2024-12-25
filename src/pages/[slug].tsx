@@ -1,6 +1,8 @@
 import { Source_Code_Pro } from 'next/font/google'
-import md from 'markdown-it'
+import markdownit from 'markdown-it'
 import DOMPurify from 'dompurify'
+import { JSDOM } from 'jsdom'
+import hljs from 'highlight.js'
 
 import { ScrollProgressBar } from '@components/ScrollProgressBar'
 import { Layout } from '@components/Layout'
@@ -36,9 +38,24 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
 
   const { text, ...rest } = pageData.page
+
+  const md = markdownit({
+    highlight: function (str, lang) {
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          return hljs.highlight(str, { language: lang }).value
+        } catch (error) {
+          console.error('Error highlighting code:', error)
+        }
+      }
+
+      return ''
+    },
+  })
+
   const page: IHTMLPage = {
     ...rest,
-    html: DOMPurify.sanitize(md().render(text)),
+    html: DOMPurify(new JSDOM('<!DOCTYPE html>').window).sanitize(md.render(text)),
   }
 
   return {
@@ -57,7 +74,7 @@ export default function PostPage({ page }: PostPageProps) {
       <Layout>
         <ScrollProgressBar />
         <section
-          className={`${styles.markdown__body} ${sourceCodePro.variable}`}
+          className={`${styles.body} ${sourceCodePro.variable}`}
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </Layout>

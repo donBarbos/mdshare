@@ -13,6 +13,7 @@ export const UploadForm = () => {
   const [isModalActive, setModalActive] = useState<boolean>(false)
   const [hasFileChanged, setHasFileChanged] = useState<boolean>(false)
   const [result, setResult] = useState<IPostPageResponse | IErrorResponse | null>(null)
+  const [isDragging, setIsDragging] = useState<boolean>(false)
   const fileInput = useRef<any>(null)
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -62,10 +63,34 @@ export const UploadForm = () => {
     setHasFileChanged(true)
   }
 
+  const handleDragOver = (event: React.DragEvent<HTMLLabelElement>) => {
+    event.preventDefault()
+    setIsDragging(true)
+  }
+
+  const handleDragLeave = () => {
+    setIsDragging(false)
+  }
+
+  const handleDrop = (event: React.DragEvent<HTMLLabelElement>) => {
+    event.preventDefault()
+    setIsDragging(false)
+    const files = event.dataTransfer.files
+    if (files.length > 0) {
+      fileInput.current.files = files
+      handleFileChange()
+    }
+  }
+
   return (
     <>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <label className={styles.form__label}>
+        <label
+          className={`${styles.form__label} ${isDragging ? styles.dragging : ''}`}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+        >
           <span className={styles.drop__title}>Drag & drop file here</span>
           or
           <input

@@ -40,7 +40,7 @@
 
   &:hover,
   &:focus {
-    border-color: var(--accent-fg);
+    border-color: var(--accent-color);
   }
 }
 
@@ -51,7 +51,6 @@
 
   font-size: 20px;
   font-weight: bold;
-  color: var(--color-fg);
 }
 
 .form__input {
@@ -80,4 +79,8 @@
   background-color: var(--color-fg);
 
   color: var(--color-bg);
+}
+
+.dragging {
+  border-color: var(--accent-color);
 }

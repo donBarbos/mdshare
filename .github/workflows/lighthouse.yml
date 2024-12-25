@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Lighthouse Check
-        uses: foo-software/lighthouse-check-action@v9.1.1
+        uses: foo-software/lighthouse-check-action@v12.0.1
         env:
           APP_URL: https://mdshare.vercel.app
         with:

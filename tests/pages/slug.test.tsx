@@ -4,6 +4,10 @@ import PostPage from '@pages/[slug]'
 
 import type { IHTMLPage } from '@interfaces'
 
+jest.mock('@utils/domPurify', () => ({
+  sanitizeHTML: jest.fn((html) => html),
+}))
+
 jest.mock('next/head', () => {
   return {
     __esModule: true,
@@ -22,7 +26,7 @@ describe('[slug] page', () => {
     _id: 'uniq-a1b2c3',
     title: 'Test Page',
     author: 'John Doe',
-    html: '<body><h2>Test Heading</h2>\n<p>This is a test page.</p></body>',
+    html: '<h2>Test Heading</h2>\n<p>This is a test page.</p>',
   } as IHTMLPage
 
   it('should render markdown text', () => {

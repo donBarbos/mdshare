@@ -1,12 +1,11 @@
 import { Source_Code_Pro } from 'next/font/google'
 import markdownit from 'markdown-it'
-import DOMPurify from 'dompurify'
-import { JSDOM } from 'jsdom'
 import hljs from 'highlight.js'
 
 import { ScrollProgressBar } from '@components/ScrollProgressBar'
 import { Layout } from '@components/Layout'
 import { SEO } from '@components/SEO'
+import { sanitizeHTML } from '@utils/domPurify'
 import styles from '@styles/markdown.module.css'
 
 import type { GetServerSideProps } from 'next'
@@ -55,7 +54,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   const page: IHTMLPage = {
     ...rest,
-    html: DOMPurify(new JSDOM('<!DOCTYPE html>').window).sanitize(md.render(text)),
+    html: sanitizeHTML(md.render(text)),
   }
 
   return {

@@ -4,4 +4,5 @@ export type GlowButtonProps = {
   title?: string
   formMethod?: 'get' | 'post'
   disabled?: boolean
+  className?: string
 }

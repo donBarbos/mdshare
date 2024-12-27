@@ -6,6 +6,8 @@ export interface IPage extends Document {
   title?: string
   author?: string
   text: string
+  createdAt?: Date
+  expireAt?: Date
 }
 
 // Processed Page
@@ -32,6 +34,7 @@ export interface IGetPageResponse {
 export interface IPostPageRequest {
   text: string
   fileName: string
+  expireAt?: Date
 }
 
 // Success Response from POST:/api/v1/pages/

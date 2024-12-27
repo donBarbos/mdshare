@@ -2,7 +2,7 @@ import Page from '@models/pageModel'
 import { generateUniqueSlug } from '@utils/generateUniqueSlug'
 
 import type { NextApiRequest, NextApiResponse } from 'next'
-import type { IPage } from '@interfaces'
+import type { IPage, IPostPageRequest } from '@interfaces'
 
 // Route: /api/v1/pages
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -12,11 +12,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log(`${new Date().toUTCString()} | Call endpoint: ${req.method} ${req.url}`)
 
     try {
-      const { fileName, text } = req.body
+      const { text, fileName, expireAt } = req.body as IPostPageRequest
       const { created, slug } = await generateUniqueSlug(req, fileName)
 
       if (!created) {
-        const page: IPage = new Page({ _id: slug, title: fileName, text: text })
+        const page: IPage = new Page({ _id: slug, title: fileName, text: text, expireAt: expireAt })
         await page.save()
         res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
         res.status(201).json({ success: true, status: 'Created', slug: slug })
@@ -37,6 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Method: *
   else {
     res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
+    res.setHeader('Allow', ['HEAD', 'POST'])
     res.status(405).json({ success: false, message: 'Method Not Allowed' })
   }
 }

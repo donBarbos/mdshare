@@ -14,6 +14,17 @@
     border var(--default-delay);
 }
 
+.form__select {
+  justify-content: space-between;
+  align-items: center;
+
+  display: flex;
+
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 50rem;
+}
+
 .form__label {
   position: relative;
   flex-direction: column;
@@ -23,8 +34,7 @@
   display: flex;
 
   margin-top: 2rem;
-  margin-bottom: 1rem;
-  border: 2px dashed var(--color-border);
+  border: 2px solid var(--color-border);
   border-radius: 12px;
   min-width: 5rem;
   width: 100%;
@@ -40,7 +50,9 @@
 
   &:hover,
   &:focus {
-    border-color: var(--accent-color);
+    transition: background-color 0s;
+
+    background-color: var(--color-hover-canvas);
   }
 }
 
@@ -51,6 +63,10 @@
 
   font-size: 20px;
   font-weight: bold;
+}
+
+.form_button {
+  margin-top: 2rem;
 }
 
 .form__input {
@@ -72,7 +88,8 @@
     border var(--default-delay);
 
   margin-right: 1rem;
-  border: 3px solid var(--color-canvas);
+  border-width: 0;
+
   border-radius: 10px;
   padding: 10px 20px;
 
@@ -82,5 +99,7 @@
 }
 
 .dragging {
-  border-color: var(--accent-color);
+  transition: background-color 0s;
+
+  background-color: var(--color-hover-canvas);
 }

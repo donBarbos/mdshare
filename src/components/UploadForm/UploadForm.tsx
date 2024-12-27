@@ -1,6 +1,7 @@
-import { useRef, useState } from 'react'
+import { DragEvent, FormEvent, useRef, useState } from 'react'
 
 import { Spinner } from '@components/Spinner'
+import { Select } from '@components/Select'
 
 import { SubmitButton } from './SubmitButton'
 import { ResultModal } from './ResultModal'
@@ -8,15 +9,36 @@ import styles from './styles.module.css'
 
 import type { IErrorResponse, IPostPageRequest, IPostPageResponse } from '@interfaces'
 
+const expiresOptions: Array<{ label: string; value: Date | null }> = [
+  {
+    label: 'No expiration',
+    value: null,
+  },
+  {
+    label: 'Remove after 1 day',
+    value: new Date(Date.now() + 24 * 60 * 60 * 1000),
+  },
+  {
+    label: 'Remove after 7 day',
+    value: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+  },
+  {
+    label: 'Remove after 31 day',
+    value: new Date(Date.now() + 31 * 24 * 60 * 60 * 1000),
+  },
+]
+
 export const UploadForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [isModalActive, setModalActive] = useState<boolean>(false)
   const [hasFileChanged, setHasFileChanged] = useState<boolean>(false)
   const [result, setResult] = useState<IPostPageResponse | IErrorResponse | null>(null)
   const [isDragging, setIsDragging] = useState<boolean>(false)
+  const [expireAt, setExpireAt] = useState<Date | null>(null)
+
   const fileInput = useRef<any>(null)
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     if (!hasFileChanged && result !== null) {
@@ -34,6 +56,7 @@ export const UploadForm = () => {
       const requestBody: IPostPageRequest = {
         text: reader.result as string,
         fileName: fileInput.current.value.replace('C:\\fakepath\\', '').replace(/\.[^/.]+$/, ''),
+        expireAt: expireAt || undefined,
       }
 
       await fetch('/api/v1/pages/', {
@@ -63,7 +86,7 @@ export const UploadForm = () => {
     setHasFileChanged(true)
   }
 
-  const handleDragOver = (event: React.DragEvent<HTMLLabelElement>) => {
+  const handleDragOver = (event: DragEvent<HTMLLabelElement>) => {
     event.preventDefault()
     setIsDragging(true)
   }
@@ -72,7 +95,7 @@ export const UploadForm = () => {
     setIsDragging(false)
   }
 
-  const handleDrop = (event: React.DragEvent<HTMLLabelElement>) => {
+  const handleDrop = (event: DragEvent<HTMLLabelElement>) => {
     event.preventDefault()
     setIsDragging(false)
     const files = event.dataTransfer.files
@@ -80,6 +103,10 @@ export const UploadForm = () => {
       fileInput.current.files = files
       handleFileChange()
     }
+  }
+
+  const handleExpireAtChange = (value: Date | null) => {
+    setExpireAt(value)
   }
 
   return (
@@ -103,6 +130,16 @@ export const UploadForm = () => {
             onChange={handleFileChange}
           />
         </label>
+        <Select
+          id="expireAt"
+          name="expireAt"
+          options={expiresOptions}
+          onChange={handleExpireAtChange}
+          value={expireAt || undefined}
+          defaultValue={undefined}
+          label="Expiration Date:"
+          className={styles.form__select}
+        />
         <SubmitButton isLoading={isModalActive} />
       </form>
       {isLoading ? <Spinner /> : <></>}

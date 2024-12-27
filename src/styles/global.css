@@ -3,6 +3,7 @@
   --color-bg: rgb(246 248 250);
   --color-border: rgb(208 215 222);
   --color-canvas: rgb(255 255 255);
+  --color-hover-canvas: rgb(240 128 128);
   --accent-color: rgb(224 0 0);
   --color-neutral-muted: rgba(175 184 193 / 20%);
   --default-delay: 0.5s;
@@ -13,6 +14,7 @@
   --color-bg: rgb(1 4 9);
   --color-border: rgb(48 54 61);
   --color-canvas: rgb(13 17 23);
+  --color-hover-canvas: rgb(119 47 50);
   --accent-color: rgb(255 77 77);
 }
 

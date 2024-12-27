@@ -8,6 +8,7 @@
   font-size: 1rem;
 
   & a {
+    font-weight: 600;
     color: inherit;
   }
 
@@ -15,5 +16,11 @@
   & a:focus,
   & a:active {
     color: var(--accent-color);
+  }
+
+  &::before {
+    content: '©';
+
+    margin-right: 6px;
   }
 }

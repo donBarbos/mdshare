@@ -98,7 +98,7 @@
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-nesting": "^11.2.1",
     "postcss-preset-env": "^8.0.1",
-    "postcss-svgo": "^5.1.0",
+    "postcss-svgo": "^7.0.1",
     "prettier": "^2.7.1",
     "semantic-release": "^19.0.5",
     "stylelint": "^15.10.1",

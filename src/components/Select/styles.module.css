@@ -1,0 +1,28 @@
+.select {
+  border: 2px solid var(--color-border);
+  border-radius: 10px;
+  width: 100%;
+  padding: 8px;
+
+  background-color: var(--color-canvas);
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+.select__wrapper {
+  margin: 0;
+}
+
+.select__label {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  display: flex;
+
+  width: 100%;
+
+  font-size: 18px;
+  font-weight: bold;
+}

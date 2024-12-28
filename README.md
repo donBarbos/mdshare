@@ -60,8 +60,8 @@ The **.mdShare** Solution: Simplify Markdown File Sharing. Effortless Sharing: U
 
 You can choose to use the hosted version (also don't forget to set up environment variables)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FdonBarbos%2Fmdshare)\
-[![Deploy Mongo Cloud](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas/database)
+- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FdonBarbos%2Fmdshare) - Use it to host your frontend and backend.
+- [![Deploy Mongo Cloud](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas/database) - Use it for free for mongodb instance.
 
 ## ⚙️ Settings
 

@@ -43,7 +43,7 @@
 
   @media only screen and (max-width: 768px) {
     position: fixed;
-    top: 4rem;
+    top: 3rem;
     left: -100%;
     flex-direction: column;
 
@@ -53,7 +53,7 @@
       background-color var(--default-delay),
       border var(--default-delay);
 
-    box-shadow: 0 10px 27px rgb(0 0 0 / 5%);
+    box-shadow: 0 2px 4px var(--header-shadow);
     border-bottom: 1px solid var(--color-border);
     width: 100%;
     padding-bottom: 20px;

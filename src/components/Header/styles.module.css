@@ -1,0 +1,14 @@
+.header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+
+  transition: all var(--default-delay);
+
+  box-shadow: 0 2px 4px var(--header-shadow);
+  width: 100%;
+  padding: 0 2rem;
+
+  background-color: var(--color-bg);
+}

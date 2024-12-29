@@ -51,6 +51,7 @@
       left 0.3s,
       color var(--default-delay),
       background-color var(--default-delay),
+      box-shadow var(--default-delay),
       border var(--default-delay);
 
     box-shadow: 0 2px 4px var(--header-shadow);

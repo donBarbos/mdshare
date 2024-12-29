@@ -29,7 +29,10 @@
 html,
 body {
   /* for a smooth theme change */
-  transition: all var(--default-delay);
+  transition:
+    color var(--default-delay) ease,
+    background-color var(--default-delay) ease,
+    border var(--default-delay) ease;
 
   width: 100%;
   height: 100%;

@@ -1,4 +1,9 @@
 .select {
+  transition:
+    color var(--default-delay) ease,
+    background-color var(--default-delay) ease,
+    border var(--default-delay) ease;
+
   border: 2px solid var(--color-border);
   border-radius: 10px;
   width: 100%;

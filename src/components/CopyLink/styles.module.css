@@ -9,7 +9,11 @@
 
   display: table-cell;
 
-  transition: all var(--default-delay);
+  transition:
+    color var(--default-delay),
+    background-color var(--default-delay),
+    fill var(--default-delay),
+    border var(--default-delay);
 
   border: 1px solid var(--color-border);
   border-right-color: rgb(0 0 0 / 0%);
@@ -24,6 +28,8 @@
 }
 
 .copy_link__button {
+  transition: border var(--default-delay);
+
   border: 1px solid var(--color-border);
   border-radius: 0 8px 8px 0;
   padding: 5px 15px;
@@ -43,9 +49,13 @@
 }
 
 .clipboard_copy_icon {
+  transition: fill var(--default-delay);
+
   fill: var(--color-fg);
 }
 
 .clipboard_check_icon {
+  transition: fill var(--default-delay);
+
   fill: var(--accent-color);
 }

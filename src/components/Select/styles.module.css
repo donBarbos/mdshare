@@ -7,16 +7,70 @@
   border: 2px solid var(--color-border);
   border-radius: 10px;
   width: 100%;
+  max-width: 20rem;
   padding: 8px;
 
   background-color: var(--color-canvas);
   cursor: pointer;
 
   font-size: 16px;
+  color: var(--color-fg);
+  appearance: none;
+
+  &:hover,
+  &:focus {
+    transition: border 0s;
+
+    border-color: var(--accent-color);
+  }
+
+  &:focus:not(:focus-visible) {
+    border-color: var(--color-border);
+  }
 }
 
 .select__wrapper {
+  position: relative;
+
   margin: 0;
+}
+
+.select__wrapper::before,
+.select__wrapper::after {
+  --size: 0.3rem;
+
+  content: '';
+
+  position: absolute;
+  right: 1rem;
+
+  pointer-events: none;
+}
+
+.select__wrapper::before {
+  top: 40%;
+
+  transition:
+    color var(--default-delay) ease,
+    background-color var(--default-delay) ease,
+    border var(--default-delay) ease;
+
+  border-bottom: var(--size) solid var(--color-border);
+  border-right: var(--size) solid transparent;
+  border-left: var(--size) solid transparent;
+}
+
+.select__wrapper::after {
+  top: 55%;
+
+  transition:
+    color var(--default-delay) ease,
+    background-color var(--default-delay) ease,
+    border var(--default-delay) ease;
+
+  border-top: var(--size) solid var(--color-border);
+  border-right: var(--size) solid transparent;
+  border-left: var(--size) solid transparent;
 }
 
 .select__label {

@@ -50,9 +50,9 @@
 
   &:hover,
   &:focus {
-    transition: background-color 0s;
+    transition: border 0s;
 
-    background-color: var(--color-hover-canvas);
+    border-color: var(--accent-color);
   }
 }
 

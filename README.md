@@ -13,9 +13,7 @@
 <p align="center">
   <a href="https://github.com/donBarbos/mdshare/tags"><img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/donBarbos/mdshare"></a>
   <a href="https://codecov.io/gh/donBarbos/mdshare" ><img alt="Coverage Status" src="https://codecov.io/gh/donBarbos/mdshare/branch/main/graph/badge.svg?token=0O5750DY6J"/></a>
-  <a href="https://github.com/donBarbos/mdshare/actions/workflows/build.yml"><img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/mdshare/build.yml?label=build"></a>
-  <a href="https://github.com/donBarbos/mdshare/actions/workflows/tests.yml"><img alt="Tests Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/mdshare/tests.yml?label=tests"></a>
-  <a href="https://github.com/donBarbos/mdshare/actions/workflows/lint.yml"><img alt="Linter Status" src="https://img.shields.io/github/actions/workflow/status/donBarbos/mdshare/lint.yml?label=lint"></a>
+  <a href="https://github.com/donBarbos/mdshare/actions/workflows/ci.yml"><img alt="CI Status" src="https://github.com/donBarbos/mdshare/actions/workflows/ci.yml/badge.svg"></a>
   <a href="http://commitizen.github.io/cz-cli/"><img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"></a>
   <a href="https://github.com/donBarbos/mdshare/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg" alt="License"></a>
 </p>

@@ -7,5 +7,5 @@ export type ResultModalProps = {
 }
 
 export type SubmitButtonProps = {
-  isLoading: boolean
+  isActive: boolean
 }

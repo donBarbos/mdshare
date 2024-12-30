@@ -4,14 +4,14 @@ import styles from './styles.module.css'
 
 import type { SubmitButtonProps } from './types'
 
-export const SubmitButton = ({ isLoading }: SubmitButtonProps) => {
+export const SubmitButton = ({ isActive }: SubmitButtonProps) => {
   return (
     <GlowButton
       text="SHARE"
       type="submit"
       title="Share selected file"
       formMethod="post"
-      disabled={isLoading}
+      disabled={isActive}
       className={styles.form_button}
     />
   )

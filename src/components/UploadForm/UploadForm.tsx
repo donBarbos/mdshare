@@ -140,7 +140,7 @@ export const UploadForm = () => {
           label="Expiration Date:"
           className={styles.form__select}
         />
-        <SubmitButton isLoading={isModalActive} />
+        <SubmitButton isActive={isModalActive} />
       </form>
       {isLoading ? <Spinner /> : <></>}
       <ResultModal isActive={isModalActive} setActive={setModalActive} result={result} />

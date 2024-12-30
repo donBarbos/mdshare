@@ -25,6 +25,7 @@ export const ScrollProgressBar = () => {
       className={styles.progress_bar}
       style={{ transform: `scale(${scroll}, 1)` }}
       role="scrollbar"
+      aria-controls="main-content"
       aria-valuenow={scroll * 100}
       aria-valuemin={0}
       aria-valuemax={100}

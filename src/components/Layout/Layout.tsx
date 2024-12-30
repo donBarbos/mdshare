@@ -10,7 +10,9 @@ export const Layout = ({ children }: LayoutProps) => {
   return (
     <div className={styles.wrapper}>
       <Header />
-      <main className={styles.main}>{children}</main>
+      <main id="main-content" className={styles.main}>
+        {children}
+      </main>
       <Footer />
       <ScrollToTop />
     </div>

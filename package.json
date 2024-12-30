@@ -111,7 +111,7 @@
     "stylelint-no-indistinguishable-colors": "^1.3.2",
     "stylelint-order": "^6.0.1",
     "ts-jest": "^29.0.5",
-    "typescript": "4.8.4"
+    "typescript": "5.7.2"
   },
   "config": {
     "commitizen": {

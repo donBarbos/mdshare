@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.1.1",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.4.0",
@@ -74,7 +74,7 @@
     "@types/node": "18.11.15",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
-    "@types/testing-library__jest-dom": "^5.14.5",
+    "@types/testing-library__jest-dom": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "commitizen": "^4.2.5",
     "conventional-changelog-cli": "^3.0.0",

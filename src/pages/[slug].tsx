@@ -17,7 +17,7 @@ const sourceCodePro = Source_Code_Pro({
   variable: '--font-code',
 })
 
-const APP_URL = process.env.APP_URL || 'http://localhost:3000'
+const APP_URL = process.env.APP_URL
 
 export type PostPageProps = {
   page: IHTMLPage

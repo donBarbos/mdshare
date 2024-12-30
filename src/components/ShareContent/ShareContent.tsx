@@ -13,7 +13,7 @@ import styles from './styles.module.css'
 
 import type { ShareContentProps } from './types'
 
-const APP_URL = process.env.APP_URL || 'https://mdshare.vercel.app'
+const APP_URL = process.env.APP_URL
 
 const buttons = [
   { href: 'https://www.facebook.com/sharer/sharer.php?u=', title: 'Facebook', svg: Facebook },

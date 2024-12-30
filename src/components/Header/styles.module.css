@@ -4,7 +4,10 @@
   top: 0;
   left: 0;
 
+  transform: translateY(0);
+
   transition:
+    transform 0.3s ease,
     color var(--default-delay),
     background-color var(--default-delay),
     box-shadow var(--default-delay);
@@ -14,4 +17,8 @@
   padding: 0 2rem;
 
   background-color: var(--color-bg);
+}
+
+.hidden {
+  transform: translateY(-100%);
 }

@@ -10,7 +10,6 @@
   transition:
     opacity 0.2s ease-out,
     transform 0.2s ease-in-out,
-    fill var(--default-delay),
     color var(--default-delay),
     background-color var(--default-delay);
 
@@ -23,12 +22,17 @@
   cursor: pointer;
 
   & svg {
+    transition:
+      opacity 0.2s ease-out,
+      transform 0.2s ease-in-out,
+      fill var(--default-delay);
+
     width: 2.8rem;
     height: 2.8rem;
     fill: var(--color-bg);
   }
 
-  &.active {
+  &.visible {
     opacity: 1;
     transform: scale(1);
   }

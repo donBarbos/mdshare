@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import profilePic from '@public/avatar.jpg'
-import cuteCat from '@public/cat.jpg'
+import profilePic from '@public/images/avatar.jpg'
+import cuteCat from '@public/images/cat.jpg'
 import { SEO } from '@components/SEO'
 import { Layout } from '@components/Layout'
 

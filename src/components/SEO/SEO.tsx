@@ -10,7 +10,7 @@ export const SEO = ({
   title = '',
   author = 'donBarbos',
   description = 'Best way to share your markdown files.',
-  image = '/favicon.svg',
+  image = '/og.jpg',
   lang = 'en',
 }: SEOProps) => {
   const location: string = useRouter().pathname.toString()
@@ -30,6 +30,7 @@ export const SEO = ({
       <title>{seo.title}</title>
       <meta name="robots" content="index,follow" />
       <meta name="description" content={seo.description} />
+      <meta name="keywords" content="markdown, share, mdshare, md, md share, markdown share" />
       <link rel="canonical" href={seo.url} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={seo.url} />

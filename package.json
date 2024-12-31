@@ -96,7 +96,7 @@
     "mongodb-memory-server": "^8.11.4",
     "msw": "^1.2.2",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-nesting": "^11.2.1",
+    "postcss-nesting": "^13.0.1",
     "postcss-preset-env": "^8.0.1",
     "postcss-svgo": "^7.0.1",
     "prettier": "^2.7.1",

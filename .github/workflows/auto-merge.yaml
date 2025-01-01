@@ -8,10 +8,6 @@ on:
 jobs:
   merge-me:
     name: Merge me!
-    needs:
-      - lint
-      - build
-      - test
     runs-on: ubuntu-latest
     steps:
       - # It is often a desired behavior to merge only when a workflow execution

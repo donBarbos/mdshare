@@ -11,7 +11,7 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   preset: 'ts-jest',
   testRegex: '(/tests/.*|\\.(test|spec))\\.(ts|tsx|js|jsx)$',
-  testEnvironment: 'jest-environment-jsdom',
+  testEnvironment: 'jest-fixed-jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   globals: {
     'ts-jest': {

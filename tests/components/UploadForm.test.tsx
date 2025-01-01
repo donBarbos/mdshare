@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import { rest } from 'msw'
+import { http } from 'msw'
 import { setupServer } from 'msw/node'
 
 import { UploadForm } from '@components/UploadForm'
@@ -8,11 +8,11 @@ import type { IPostPageRequest } from '@interfaces'
 
 describe('UploadForm component', () => {
   const server = setupServer(
-    rest.post('/api/v1/pages/', (req, res, ctx) => {
-      const { text, fileName } = req.body as IPostPageRequest
+    http.post('/api/v1/pages/', async ({ request }) => {
+      const { text, fileName } = (await request.json()) as IPostPageRequest
       // Mock the response here
-      return res(
-        ctx.json({
+      return new Response(
+        JSON.stringify({
           success: true,
           data: {
             text,

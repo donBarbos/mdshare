@@ -29,7 +29,7 @@
     "prettier": "prettier . --ignore-path .prettierignore --write",
     "prettier:check": "yarn prettier --check",
     "typecheck": "tsc --noEmit",
-    "prepare": "husky install",
+    "prepare": "husky",
     "commit": "cz",
     "init-changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "preversion": "yarn test:ci && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"

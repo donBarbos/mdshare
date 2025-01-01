@@ -32,7 +32,6 @@ jobs:
           yarn typecheck
 
   build:
-    needs: lint
     name: Check NextJS Build
     runs-on: ubuntu-latest
     strategy:
@@ -67,7 +66,6 @@ jobs:
           yarn build
 
   test:
-    needs: build
     name: Tests
     runs-on: ubuntu-latest
     strategy:

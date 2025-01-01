@@ -118,7 +118,7 @@ time.now()
   it('should return notFound for failed fetch', async () => {
     ;(global.fetch as jest.Mock).mockResolvedValueOnce({
       ok: false,
-      json: async () => ({ success: false } as IErrorResponse),
+      json: async () => ({ success: false }) as IErrorResponse,
     })
 
     const context = { query: { slug: 'test' }, res: { setHeader: jest.fn() } } as any
@@ -135,7 +135,7 @@ time.now()
         ({
           success: true,
           page: mockPageFromStore,
-        } as IGetPageResponse),
+        }) as IGetPageResponse,
     })
 
     const context = { query: { slug: 'test' }, res: { setHeader: jest.fn() } } as any

@@ -5,6 +5,7 @@
   --color-canvas: rgb(255 255 255);
   --color-hover-canvas: rgb(240 128 128);
   --accent-color: rgb(224 0 0);
+  --accent-shadow-color: rgba(224 0 0 / 30%);
   --header-shadow: rgba(0 0 0 / 10%);
   --color-neutral-muted: rgba(175 184 193 / 20%);
   --default-delay: 0.5s;
@@ -17,6 +18,7 @@
   --color-canvas: rgb(13 17 23);
   --color-hover-canvas: rgb(119 47 50);
   --accent-color: rgb(255 77 77);
+  --accent-shadow-color: rgba(255 77 77 / 30%);
   --header-shadow: rgba(255 255 255 / 10%);
 }
 

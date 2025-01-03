@@ -50,6 +50,7 @@
     "lint-staged"
   ],
   "dependencies": {
+    "@giscus/react": "^3.1.0",
     "@svgr/webpack": "^8.1.0",
     "@vercel/analytics": "^1.1.1",
     "dompurify": "^3.2.3",
@@ -69,7 +70,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^15.0.7",
     "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.4.0",
+    "@types/jest": "^29.5.14",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "22.10.4",
     "@types/react": "18.0.21",
@@ -111,7 +112,7 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.6.0",
     "stylelint-no-indistinguishable-colors": "^2.3.0",
     "stylelint-order": "^6.0.1",
-    "ts-jest": "^29.0.5",
+    "ts-jest": "^29.2.5",
     "typescript": "5.7.2"
   },
   "config": {

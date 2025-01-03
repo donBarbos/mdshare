@@ -1,5 +1,6 @@
 import { DragEvent, FormEvent, useRef, useState } from 'react'
 
+import { Checkbox } from '@components/Checkbox'
 import { Spinner } from '@components/Spinner'
 import { Select } from '@components/Select'
 
@@ -35,6 +36,7 @@ export const UploadForm = () => {
   const [result, setResult] = useState<IPostPageResponse | IErrorResponse | null>(null)
   const [isDragging, setIsDragging] = useState<boolean>(false)
   const [expireAt, setExpireAt] = useState<Date | null>(null)
+  const [allowComments, setAllowComments] = useState<boolean>(false)
 
   const fileInput = useRef<any>(null)
 
@@ -56,7 +58,8 @@ export const UploadForm = () => {
       const requestBody: IPostPageRequest = {
         text: reader.result as string,
         fileName: fileInput.current.value.replace('C:\\fakepath\\', '').replace(/\.[^/.]+$/, ''),
-        expireAt: expireAt || undefined,
+        isCommentable: allowComments,
+        ...(expireAt instanceof Date ? { expireAt } : {}),
       }
 
       await fetch('/api/v1/pages/', {
@@ -145,6 +148,14 @@ export const UploadForm = () => {
           defaultValue={undefined}
           label="Expiration date"
           className={styles.form__select}
+        />
+        <Checkbox
+          id="allow-comments"
+          name="page_allow_comments"
+          value={allowComments}
+          onChange={() => setAllowComments(!allowComments)}
+          label="Allow comments on this page"
+          className={styles.form__checkbox}
         />
         <SubmitButton isActive={isModalActive} />
       </form>

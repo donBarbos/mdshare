@@ -9,7 +9,7 @@ export const SubmitButton = ({ isActive }: SubmitButtonProps) => {
     <GlowButton
       text="SHARE"
       type="submit"
-      title="Share selected file"
+      title="Create Shared Page"
       formMethod="post"
       disabled={isActive}
       className={styles.form_button}

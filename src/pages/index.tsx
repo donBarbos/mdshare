@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     <>
       <SEO />
       <Layout>
-        <h1>Just Upload Markdown File</h1>
+        <h1 style={{ fontSize: '26px', marginTop: '0.5rem' }}>Upload Markdown File</h1>
         <UploadForm />
       </Layout>
     </>

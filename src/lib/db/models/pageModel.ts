@@ -1,11 +1,12 @@
 import db from '@lib/db'
 
 const pageSchema = new db.Schema({
-  _id: { type: String, required: true, trim: true, index: true },
+  _id: { type: String, required: true, trim: true },
   title: { type: String, required: false, trim: true },
   author: { type: String, required: false, trim: true },
   text: { type: String, required: true, trim: true },
-  createdAt: { type: Date, required: true, default: Date.now },
+  isCommentable: { type: Boolean, default: false },
+  createdAt: { type: Date, default: Date.now },
   expireAt: { type: Date, required: false, expires: 3600 },
 })
 

@@ -12,11 +12,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log(`${new Date().toUTCString()} | Call endpoint: ${req.method} ${req.url}`)
 
     try {
-      const { text, fileName, expireAt } = req.body as IPostPageRequest
+      const { text, fileName, expireAt, isCommentable } = req.body as IPostPageRequest
       const { created, slug } = await generateUniqueSlug(req, fileName)
 
       if (!created) {
-        const page: IPage = new Page({ _id: slug, title: fileName, text: text, expireAt: expireAt })
+        const page: IPage = new Page({
+          _id: slug,
+          title: fileName,
+          text: text,
+          expireAt: expireAt,
+          isCommentable: isCommentable,
+        })
         await page.save()
         res.setHeader('Cache-Control', 'public, max-age=31536000, must-revalidate')
         res.status(201).json({ success: true, status: 'Created', slug: slug })

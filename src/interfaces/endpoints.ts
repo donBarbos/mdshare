@@ -6,6 +6,7 @@ export interface IPage extends Document {
   title?: string
   author?: string
   text: string
+  isCommentable: boolean
   createdAt?: Date
   expireAt?: Date
 }
@@ -15,6 +16,7 @@ export interface IHTMLPage {
   _id: string // a.k.a. `slug`
   title?: string
   author?: string
+  isCommentable: boolean
   html: string
 }
 
@@ -34,6 +36,7 @@ export interface IGetPageResponse {
 export interface IPostPageRequest {
   text: string
   fileName: string
+  isCommentable?: boolean
   expireAt?: Date
 }
 

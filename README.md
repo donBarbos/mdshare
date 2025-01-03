@@ -60,18 +60,23 @@ You can choose to use the hosted version (also don't forget to set up environmen
 
 - [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FdonBarbos%2Fmdshare) - Use it to host your frontend and backend.
 - [![Deploy Mongo Cloud](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas/database) - Use it for free for mongodb instance.
+- [💎 GISCUS](https://giscus.app/) - To support comments, you need to specify your open repo with discussions and log in.
 
 ## ⚙️ Settings
 
-|     variable     | description                                                                                                                            |
-| :--------------: | -------------------------------------------------------------------------------------------------------------------------------------- |
-|    `APP_URL`     | URL of your application such as your domain `https://example.com` or `http://localhost:3000` (needed for SEO and generate links)       |
-|   `MONGO_HOST`   | host is the server where your mongodb server is running                                                                                |
-|   `MONGO_PORT`   | port that mongodb server is listening on                                                                                               |
-|   `MONGO_USER`   | user is an account that is used to authenticate and access the database                                                                |
-|  `MONGO_PASSWD`  | password is used to authenticate the user who is accessing the database                                                                |
-| `MONGO_DATABASE` | name of the mongodb database that your application will connect to                                                                     |
-|   `MONGO_URI`    | you can specify the connection string for a mongodb database instead of the previous variables (has higher priority, empty by default) |
+|       variable       | description                                                                                                                            |
+| :------------------: | -------------------------------------------------------------------------------------------------------------------------------------- |
+|      `APP_URL`       | URL of your application such as your domain `https://example.com` or `http://localhost:3000` (needed for SEO and generate links)       |
+|     `MONGO_HOST`     | host is the server where your mongodb server is running                                                                                |
+|     `MONGO_PORT`     | port that mongodb server is listening on                                                                                               |
+|     `MONGO_USER`     | user is an account that is used to authenticate and access the database                                                                |
+|    `MONGO_PASSWD`    | password is used to authenticate the user who is accessing the database                                                                |
+|   `MONGO_DATABASE`   | name of the mongodb database that your application will connect to                                                                     |
+|     `MONGO_URI`      | you can specify the connection string for a mongodb database instead of the previous variables (has higher priority, empty by default) |
+|    `GISCUS_USER`     | GitHub username of the Giscus user managing the comments                                                                               |
+|    `GISCUS_REPO`     | GitHub repository where Giscus will store comments                                                                                     |
+|   `GISCUS_REPO_ID`   | Unique ID of the repository specified for Giscus to operate                                                                            |
+| `GISCUS_CATEGORY_ID` | Unique ID of the discussion category in the repository                                                                                 |
 
 ## 🔧 Tech Stack
 
@@ -82,6 +87,7 @@ You can choose to use the hosted version (also don't forget to set up environmen
 - `MongoDB` — NoSQL database that stores data in JSON-like documents.
 - `PostCSS` — tool for transforming CSS with JavaScript-based plugins.
 - `markdown-it` — markdown parser to generate HTML.
+- `giscus` — comments system powered by GitHub Discussions.
 
 ## 🤝 Contributing
 

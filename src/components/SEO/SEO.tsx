@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import type { SEOProps } from './types'
 
 const SITE_NAME = 'md share'
-const SITE_URL = process.env.APP_URL || 'https://mdshare.vercel.app'
+const SITE_URL = process.env.APP_URL
 
 export const SEO = ({
   title = '',

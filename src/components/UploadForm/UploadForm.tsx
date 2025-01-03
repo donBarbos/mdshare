@@ -9,7 +9,7 @@ import styles from './styles.module.css'
 
 import type { IErrorResponse, IPostPageRequest, IPostPageResponse } from '@interfaces'
 
-const expiresOptions: Array<{ label: string; value: Date | null }> = [
+const expiresOptions: { label: string; value: Date | null }[] = [
   {
     label: 'No expiration',
     value: null,
@@ -105,8 +105,14 @@ export const UploadForm = () => {
     }
   }
 
-  const handleExpireAtChange = (value: Date | null) => {
-    setExpireAt(value)
+  const handleExpireAtChange = (value: string) => {
+    const parsedDate = new Date(value)
+
+    if (!isNaN(parsedDate.getTime())) {
+      setExpireAt(parsedDate)
+    } else {
+      setExpireAt(null)
+    }
   }
 
   return (
@@ -131,13 +137,13 @@ export const UploadForm = () => {
           />
         </label>
         <Select
-          id="expireAt"
-          name="expireAt"
+          id="expiration-date"
+          name="page_expiration_date"
           options={expiresOptions}
           onChange={handleExpireAtChange}
           value={expireAt || undefined}
           defaultValue={undefined}
-          label="Expiration Date:"
+          label="Expiration date"
           className={styles.form__select}
         />
         <SubmitButton isActive={isModalActive} />

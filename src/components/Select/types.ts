@@ -9,7 +9,7 @@ export type SelectProps = {
   id: string
   name: string
   options: SelectOption[]
-  onChange: (value: valueType) => void
+  onChange: (value: string) => void
   value?: valueType
   defaultValue?: valueType
   label?: string

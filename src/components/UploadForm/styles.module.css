@@ -8,6 +8,8 @@
 }
 
 .form * {
+  --max-w: 35rem;
+
   transition:
     color var(--default-delay),
     background-color var(--default-delay),
@@ -20,9 +22,20 @@
 
   display: flex;
 
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
-  max-width: 50rem;
+  max-width: var(--max-w);
+}
+
+.form__checkbox {
+  justify-content: space-between;
+  align-items: center;
+
+  display: flex;
+
+  margin-top: 1rem;
+  width: 100%;
+  max-width: var(--max-w);
 }
 
 .form__label {
@@ -33,14 +46,14 @@
 
   display: flex;
 
-  margin-top: 2rem;
+  margin-top: 1rem;
   border: 2px solid var(--color-border);
   border-radius: 12px;
   min-width: 5rem;
   width: 100%;
-  max-width: 50rem;
+  max-width: var(--max-w);
   min-height: 10rem;
-  height: 40vh;
+  height: 32vh;
   max-height: 30rem;
 
   background-color: var(--color-canvas);
@@ -67,13 +80,14 @@
 
 .form_button {
   margin-top: 2rem;
+  max-width: var(--max-w);
 }
 
 .form__input {
   transition: color var(--default-delay), background-color var(--default-delay);
 
   margin-top: 12px;
-  width: 95%;
+  width: 100%;
   max-width: 18rem;
 
   cursor: pointer;

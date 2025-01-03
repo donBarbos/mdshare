@@ -34,7 +34,7 @@ export const Select = ({
         className={styles.select}
       >
         {options.map((option) => (
-          <option key={option.value} value={option.value}>
+          <option key={option.value} value={option.value ?? undefined}>
             {option.label}
           </option>
         ))}

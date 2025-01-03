@@ -26,7 +26,7 @@ describe('Home', () => {
     render(<Home />)
 
     const heading = screen.getByRole('heading', {
-      name: /Just Upload Markdown File/i,
+      name: /Upload Markdown File/i,
     })
     expect(heading).toBeInTheDocument()
   })

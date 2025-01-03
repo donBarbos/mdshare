@@ -6,6 +6,10 @@ import type { IPage, IHTMLPage, IGetPageResponse, IErrorResponse } from '@interf
 
 const appUrl = process.env.APP_URL
 
+jest.mock('@giscus/react', () => ({
+  execSync: jest.fn(),
+}))
+
 jest.mock('@utils/domPurify', () => ({
   sanitizeHTML: jest.fn((html) => html),
 }))
@@ -91,6 +95,13 @@ import time
 
 time.now()
 \`\`\`
+
+- Should be list element.
+\`\`\`unknown language
+import time
+
+time.now()
+\`\`\`
 `,
   } as IPage
   const mockHTMLPage = {
@@ -100,6 +111,13 @@ time.now()
     html: `<h1>Should be first title</h1>
 <p><strong>Should be bold.</strong></p>
 <pre><code class="language-python"><span class="hljs-keyword">import</span> time
+
+time.now()
+</code></pre>
+<ul>
+<li>Should be list element.</li>
+</ul>
+<pre><code class="language-unknown">import time
 
 time.now()
 </code></pre>

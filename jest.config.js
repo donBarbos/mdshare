@@ -19,7 +19,7 @@ const customJestConfig = {
     },
   },
   transform: {
-    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
 
   // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work

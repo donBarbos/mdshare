@@ -1,6 +1,6 @@
 {
   "name": "mdshare",
-  "version": "1.8.15",
+  "version": "1.12.2",
   "description": "Application to share Markdown files",
   "author": "donBarbos <donbarbos@proton.me>",
   "license": "AGPL-3.0",
@@ -52,7 +52,7 @@
   "dependencies": {
     "@giscus/react": "^3.1.0",
     "@svgr/webpack": "^8.1.0",
-    "@vercel/analytics": "^1.1.1",
+    "@vercel/analytics": "^1.4.1",
     "dompurify": "^3.2.3",
     "focus-visible": "^5.2.0",
     "highlight.js": "^11.11.0",

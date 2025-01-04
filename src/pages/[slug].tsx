@@ -1,13 +1,11 @@
 import { Source_Code_Pro } from 'next/font/google'
 import { useTheme } from 'next-themes'
 import Giscus from '@giscus/react'
-import markdownit from 'markdown-it'
-import hljs from 'highlight.js'
 
 import { ScrollProgressBar } from '@components/ScrollProgressBar'
 import { Layout } from '@components/Layout'
 import { SEO } from '@components/SEO'
-import { sanitizeHTML } from '@utils/domPurify'
+import { convertPageToHTML } from '@utils/convertPage'
 import styles from '@styles/markdown.module.css'
 
 import type { GetServerSideProps } from 'next'
@@ -42,22 +40,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     }
   }
 
-  const { text, ...rest } = pageData.page
-
-  const md = markdownit({
-    highlight: function (str, lang) {
-      if (lang && hljs.getLanguage(lang)) {
-        return hljs.highlight(str, { language: lang }).value || ''
-      }
-
-      return ''
-    },
-  })
-
-  const page: IHTMLPage = {
-    ...rest,
-    html: sanitizeHTML(md.render(text)),
-  }
+  const page = convertPageToHTML(pageData.page)
 
   return {
     props: {

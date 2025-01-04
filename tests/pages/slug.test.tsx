@@ -10,10 +10,6 @@ jest.mock('@giscus/react', () => ({
   execSync: jest.fn(),
 }))
 
-jest.mock('@utils/domPurify', () => ({
-  sanitizeHTML: jest.fn((html) => html),
-}))
-
 jest.mock('next/head', () => {
   return {
     __esModule: true,

@@ -30,7 +30,7 @@ export const Select = ({
         name={name}
         value={value}
         defaultValue={defaultValue}
-        onChange={handleChange}
+        onChange={(e) => handleChange(e)}
         className={styles.select}
       >
         {options.map((option) => (

@@ -39,8 +39,10 @@ const nextConfig = withPWA({
   },
   env: {
     APP_URL: process.env.APP_URL,
-    API_BASE_URL: process.env.API_BASE_URL,
-    API_KEY: process.env.API_KEY,
+    GISCUS_USER: process.env.GISCUS_USER,
+    GISCUS_REPO: process.env.GISCUS_REPO,
+    GISCUS_REPO_ID: process.env.GISCUS_REPO_ID,
+    GISCUS_CATEGORY_ID: process.env.GISCUS_CATEGORY_ID,
   },
   webpack(config) {
     config.module.rules.push({

@@ -10,22 +10,22 @@ import styles from './styles.module.css'
 
 import type { IErrorResponse, IPostPageRequest, IPostPageResponse } from '@interfaces'
 
-const expiresOptions: { label: string; value: Date | null }[] = [
+const expiresOptions: { label: string; value: string }[] = [
   {
     label: 'No expiration',
-    value: null,
+    value: '',
   },
   {
     label: 'Remove after 1 day',
-    value: new Date(Date.now() + 24 * 60 * 60 * 1000),
+    value: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
   },
   {
     label: 'Remove after 7 day',
-    value: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+    value: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
   },
   {
     label: 'Remove after 31 day',
-    value: new Date(Date.now() + 31 * 24 * 60 * 60 * 1000),
+    value: new Date(Date.now() + 31 * 24 * 60 * 60 * 1000).toISOString(),
   },
 ]
 
@@ -144,7 +144,7 @@ export const UploadForm = () => {
           name="page_expiration_date"
           options={expiresOptions}
           onChange={handleExpireAtChange}
-          value={expireAt || undefined}
+          value={expireAt ? expireAt.toISOString() : ''}
           defaultValue={undefined}
           label="Expiration date"
           className={styles.form__select}

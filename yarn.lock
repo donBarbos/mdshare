@@ -10794,10 +10794,10 @@ stylelint-declaration-block-no-ignored-properties@^2.6.0:
   resolved "https://registry.yarnpkg.com/stylelint-declaration-block-no-ignored-properties/-/stylelint-declaration-block-no-ignored-properties-2.8.0.tgz#a7bc95a46f4bc971aec0e33274bfbdecfe575435"
   integrity sha512-Ws8Cav7Y+SPN0JsV407LrnNXWOrqGjxShf+37GBtnU/C58Syve9c0+I/xpLcFOosST3ternykn3Lp77f3ITnFw==
 
-stylelint-no-indistinguishable-colors@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/stylelint-no-indistinguishable-colors/-/stylelint-no-indistinguishable-colors-2.3.0.tgz#5179ef49dfc985231c0e714156de72c99b2daff6"
-  integrity sha512-R7Jl1kYXEQGC+oDCDoY6sjZ6+FfT677PCXbBC7tizlk3mBZNR8Y50JIP8//m35DDGqFj2QvzfkVrzJJxafoUQQ==
+stylelint-no-indistinguishable-colors@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/stylelint-no-indistinguishable-colors/-/stylelint-no-indistinguishable-colors-2.3.1.tgz#472c04228fca18f785625ed1e5b9a5d39e016d95"
+  integrity sha512-maaosgwHkfAh5ueTKVB/0YNLIf2vMEaWYjRgj0ex7S2wJa5nDxWpIrDQdujZKR6sXmgPPxKFXePEBXp852IB8A==
   dependencies:
     colorguard-processor "2.0.36"
 

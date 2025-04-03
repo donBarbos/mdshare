@@ -87,7 +87,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest-dom": "^5.5.0",
     "eslint-plugin-jsx-a11y": "^6.6.0",
-    "eslint-plugin-prettier": "^5.2.5",
+    "eslint-plugin-prettier": "^5.2.6",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-testing-library": "^6.5.0",
     "husky": "^9.1.7",

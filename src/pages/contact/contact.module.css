@@ -4,9 +4,8 @@
   margin-bottom: 5px;
   width: 100%;
   max-width: 350px;
-  padding-left: 20px;
 
-  text-align: left;
+  text-align: center;
 
   @media only screen and (max-width: 300px) {
     margin-right: 0;
@@ -26,8 +25,9 @@
 .list {
   display: inline-block;
 
-  margin: 20px;
-  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 40px;
 
   text-align: left;
 
@@ -40,4 +40,11 @@
     margin-left: 0;
     padding: 0;
   }
+}
+
+.note {
+  margin: auto;
+  max-width: 700px;
+
+  text-align: left;
 }

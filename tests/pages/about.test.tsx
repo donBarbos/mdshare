@@ -39,9 +39,9 @@ describe('About', () => {
     const instructions = getAllByRole('list')[1]
 
     expect(heading).toHaveTextContent('About this site')
-    expect(instructions).toHaveTextContent('Go to Homepage')
+    expect(instructions).toHaveTextContent('Open Mainpage')
     expect(instructions.querySelector('a')).toHaveAttribute('href', './')
-    expect(instructions).toHaveTextContent('Upload your note.md')
-    expect(instructions).toHaveTextContent('Share a link to the generated page')
+    expect(instructions).toHaveTextContent('Upload your File.md')
+    expect(instructions).toHaveTextContent('Congratulations! You got link')
   })
 })

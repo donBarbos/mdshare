@@ -99,7 +99,7 @@
     "msw": "^2.7.4",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-nesting": "^13.0.1",
-    "postcss-preset-env": "^10.1.5",
+    "postcss-preset-env": "^10.1.6",
     "postcss-svgo": "^7.0.1",
     "prettier": "^3.5.3",
     "semantic-release": "^19.0.5",

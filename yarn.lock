@@ -9464,10 +9464,10 @@ postcss-sorting@^8.0.2:
   resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-8.0.2.tgz#6393385ece272baf74bee9820fb1b58098e4eeca"
   integrity sha512-M9dkSrmU00t/jK7rF6BZSZauA5MAaBW4i5EnJXspMwt4iqTh/L9j6fgMnbElEOfyRyfLfVbIHj/R52zHzAPe1Q==
 
-postcss-svgo@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-svgo/-/postcss-svgo-7.0.1.tgz#2b63571d8e9568384df334bac9917baff4d23f58"
-  integrity sha512-0WBUlSL4lhD9rA5k1e5D8EN5wCEyZD6HJk0jIvRxl+FDVOMlJ7DePHYWGGVc5QRqrJ3/06FTXM0bxjmJpmTPSA==
+postcss-svgo@^7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-svgo/-/postcss-svgo-7.0.2.tgz#3de498299af585a5bfae28fd2a445edd1f4954f6"
+  integrity sha512-5Dzy66JlnRM6pkdOTF8+cGsB1fnERTE8Nc+Eed++fOWo1hdsBptCsbG8UuJkgtZt75bRtMJIrPeZmtfANixdFA==
   dependencies:
     postcss-value-parser "^4.2.0"
     svgo "^3.3.2"

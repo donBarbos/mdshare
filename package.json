@@ -94,7 +94,7 @@
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
     "jest-fixed-jsdom": "^0.0.9",
-    "lint-staged": "^16.1.4",
+    "lint-staged": "^16.1.5",
     "mongodb-memory-server": "^10.2.0",
     "msw": "^2.10.4",
     "postcss-flexbugs-fixes": "^5.0.2",

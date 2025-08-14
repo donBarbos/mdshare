@@ -96,7 +96,7 @@
     "jest-fixed-jsdom": "^0.0.9",
     "lint-staged": "^16.1.5",
     "mongodb-memory-server": "^10.2.0",
-    "msw": "^2.10.4",
+    "msw": "^2.10.5",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-nesting": "^13.0.1",
     "postcss-preset-env": "^10.2.4",

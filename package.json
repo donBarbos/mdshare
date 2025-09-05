@@ -103,7 +103,7 @@
     "postcss-svgo": "^7.1.0",
     "prettier": "^3.6.2",
     "semantic-release": "^24.2.7",
-    "stylelint": "^15.10.1",
+    "stylelint": "^16.23.1",
     "stylelint-a11y": "^1.2.3",
     "stylelint-checkstyle-formatter": "^0.1.2",
     "stylelint-color-format": "^1.1.0",

@@ -72,7 +72,7 @@
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^30.0.0",
     "@types/markdown-it": "^14.1.2",
-    "@types/node": "24.4.0",
+    "@types/node": "24.5.0",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "@types/testing-library__jest-dom": "^5.14.5",

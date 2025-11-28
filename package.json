@@ -102,7 +102,7 @@
     "postcss-preset-env": "^10.4.0",
     "postcss-svgo": "^7.1.0",
     "prettier": "^3.7.1",
-    "semantic-release": "^24.2.9",
+    "semantic-release": "^25.0.2",
     "stylelint": "^15.10.1",
     "stylelint-a11y": "^1.2.3",
     "stylelint-checkstyle-formatter": "^0.1.2",
